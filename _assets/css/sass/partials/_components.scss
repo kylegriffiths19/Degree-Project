@@ -1,0 +1,510 @@
+/* ==========================================
+	Site Wide Components
+============================================*/
+.search {
+  margin-bottom: 6em;
+  position: relative;
+  display: block; 
+  section {
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    padding: 1.5em .625em .625em;
+    border-bottom: 3px solid #f7f1e1;
+    background-color: #272727;
+    @media screen and (max-width: 518px){
+      display: none;
+    }
+    li a {
+      font-family: american, Helvetica;
+      font-weight: 400;
+      color: #f24e45;
+    }
+    .login-fields {
+      display: none; 
+      input {
+        display: block;
+        border: 0 none;
+        border-bottom: 2.5px solid #e4e4e4;
+        line-height: 1;
+        background-color: #272727;
+        color: #e4e4e4;
+        margin-bottom: 1em;
+        font-size: 1em; 
+      }
+    }
+  }
+}  
+
+.admin {
+  display: block; 
+  li {
+    display: inline-block; 
+    &:nth-child(-n+2) {
+      padding-right: 1.75em; }
+  }
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0 1.25em; }
+
+.header-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 1.25em;
+  background-color: #f24e45;
+  background-color: #f24e45;
+  overflow: hidden; }
+
+.logo {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 1em 0 1.25em; 
+  text-align: center;
+  .logo-text{
+    @include heading-font();
+    color: $black-bg;
+    font-size: 3em;
+    margin: 0 auto;
+    & span{
+      color: $white-bg;
+    }
+  }
+  @media screen and (max-width: 518px){
+      width: 100%;
+      text-align: center;
+  }
+}
+
+
+
+.main-nav {
+  ul {
+    display: inline-block;
+    float: right;
+    position: relative;
+    margin-top: 4em; 
+    li {
+      display: inline-block;
+      float: left;
+      margin: 0 0 0 2.25em;
+      font-family: american;
+      color: #272727; 
+      span {
+        font-size: 1.75em;
+        margin-right: 0.2em; 
+      }
+      a {
+        font-size: 1.5em; 
+        &:hover {
+          text-decoration: none;
+          color: $black-darker;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 518px){
+    width: 100%;
+    text-align: center;
+    ul{   
+      float: none;
+      @include border(top, $width: 2.5px);
+      @include border(bottom, $width: 2.5px);
+      padding: .625em 0;
+      margin-top: 2em;
+    }
+    ul li{
+      margin: 0 1em 0 1em;
+    }
+  }
+}
+
+
+//footer
+footer {
+  display: block;
+  border-top: 5px solid #272727; 
+  p.copyright {
+    float: left;
+    @media screen and(max-width: 518px){
+      float: none;
+      text-align: center;
+    } 
+  }
+  .social {
+    float: right;
+    display: block;
+    margin-top: 1em; 
+    @media screen and (max-width: 518px){
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin-left: 1em;
+      font-size: 2.25em; 
+      color: $black-bg;
+      @media screen and (max-width: 518px){
+        font-size: 3.25em;
+      }
+      &:first-child{
+        @media screen and (max-width: 518px){
+          margin: 0;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color: $black-darker;
+      }
+    }
+  }
+}
+
+.footer-links {
+  margin-top: 1.25em; 
+  h2 {
+    border-bottom: 1px solid #272727; 
+    @media screen and (max-width: 767px){
+      border: none;
+    }
+  }
+  section{
+    @media screen and (max-width: 767px){
+      margin-bottom: 1.25em;
+      text-align: center;
+    }
+    ul li{
+      @media screen and (max-width: 767px){
+        list-style: none;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+.copy-social {
+  margin-top: 1.25em; }
+
+
+
+//misc
+.btn {
+  display: inline-block;
+  padding: .25em 1em;
+  background-color: #f24e45;
+  border-radius: 2px;
+  color: #272727;
+  font-family: avenir;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    background-color: #f0372d;
+    text-decoration: none; 
+  }
+}
+
+.sub-heading {
+  color: #272727; }
+
+.divider{
+  height:1px;
+  width:100%;
+  background-color:rgba(0,0,0,0.5);
+  border-bottom:1px solid $white-bg;
+  position:relative;
+  margin: 1.75em 0 1.75em;
+  &:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background-image:-webkit-gradient(linear, left top, right top, color-stop(0, $white-bg), color-stop(0.5, rgba(250,250,250,0)), color-stop(1, $white-bg));
+    background-image:-webkit-linear-gradient(left, $white-bg 0%, rgba(250,250,250,0) 50%, $white-bg 100%);
+    background-image:-moz-linear-gradient(left, $white-bg 0%, rgba(250,250,250,0) 50%, $white-bg 100%);
+    background-image:-o-linear-gradient(left, $white-bg 0%, rgba(250,250,250,0) 50%, $white-bg 100%);
+    background-image:-ms-linear-gradient(left, $white-bg 0%, rgba(250,250,250,0) 50%, $white-bg 100%);
+    background-image:linear-gradient(left, $white-bg 0%, rgba(250,250,250,0) 50%, $white-bg 100%)
+  }
+}
+
+.back-to-top{
+  font-size: 3em;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+  z-index: 200;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+  color: $black-bg;
+  &:hover{
+    text-decoration: none;
+    color: $red-bg;
+  }
+}
+
+
+/* ==========================================
+	Page Specific
+============================================*/
+/* ==========================================
+	HOMEPAGE
+============================================*/
+.featured, .browse-categories {
+  margin-top: 1.25em; 
+}
+
+.featured h2 {
+  text-align: center; 
+}
+
+.slider-wrap {
+  margin: 0 auto 1.25em;
+  text-align: center; 
+  img {
+    width: 200px;
+    height: 150px;
+    margin: 0 1.25em; 
+  }
+}
+
+.image_carousel {
+  padding: .9375em 0 .9375em 2.5em; 
+  img {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 9px;
+    margin: 7px;
+    display: block;
+    float: left; 
+  }
+}
+
+.clearfix {
+  float: none;
+  clear: both; }
+
+.tag-wrap {
+  display: block;
+  overflow: hidden;
+  background-color: #272727;
+  padding: 0em .625em 1.25em; 
+  .tagline {
+    font-family: american, Helvetica;
+    font-weight: 400;
+    color: #f24e45;
+    font-size: 2em;
+    text-align: center;
+    color: #F7F1E1; 
+    h3 {
+      margin-bottom: 0;
+      margin-top: 1.25em;
+      color: #f7f1e1; 
+    }
+    p {
+      margin-top: 0;
+      font-size: 0.75em;
+      color: #f7f1e1; 
+    }
+  }
+  @media screen and (max-width: 806px){
+    .tagline p{
+      font-size: .65em;
+    }
+    .tagline h3{
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 518px){
+    .tagline h3{
+      margin-bottom: .75em;
+    }
+  }
+}
+
+
+//features section
+.features {
+  article{
+    margin: 1.25em 0em;
+    h1{
+      @media screen and (max-width: 767px){
+        text-align: center;
+      }
+    }
+  }
+  .btn{
+    margin-bottom: 1.25em;
+    @media screen and (max-width: 768px) {
+      padding: .5em 2em;
+    }
+  }
+  ul{
+    padding-left: 1em;
+    li {
+      color: #34332F;
+      list-style: circle;
+      font-family: avenir, sans-serif;
+      font-weight: 400;
+      font-style: normal; 
+      @media screen and (max-width: 767px){
+        list-style: none;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+article.feature-list{
+  width: 45%;
+  @media screen and (max-width: 767px){
+    width: 100%;
+    margin: 2.5em 0em;
+    text-align: center;
+  }
+}
+
+article.feature-btn{
+  @media screen and (max-width: 767px){
+    text-align: center;
+  }
+}
+
+
+//steps diagram
+.steps {
+  position: relative;
+  margin: 1.25em 0em;
+  padding: 1.25em 0em 1.25em; 
+  .step{
+    position: relative;
+    @media screen and (max-width: 767px){
+      &:nth-child(-n+3){
+        margin-bottom: 8em;
+      }
+    }  
+    h3 {
+      display: inline-block;
+      background-color: #272727;
+      padding: .625em .625em .4em;
+      margin-bottom: 0;
+      border-bottom: 2.5px solid #f24e45; 
+    }
+  }
+  .step-2:before, .step-3:before {
+    content: "\27A1";
+    position: absolute;
+    left: -25px;
+    top: 40px;
+    color: #f24e45;
+    font-size: 4em; 
+    @media screen and (max-width: 767px){
+       content: "\2B07";
+       right: 0;
+       top: -115px;
+       right: -20px;
+    }
+  }
+}
+
+
+
+//latest tweets section
+.latest-tweets{
+  text-align: center;
+  @media screen and (max-width:767px){
+    display: none;
+  }
+}
+.tweet-box {
+  position:relative;
+  display: inline-block;
+  padding: 0em 1.875em .9375em;
+  width: 11.5em;
+  margin:0 auto;
+  color: $black-bg;
+  background: $red-darker; /* default background for browsers without gradient support */
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from($red-bg), to($red-darker));
+  background:-moz-linear-gradient($red-bg, $red-darker);
+  background:-o-linear-gradient($red-bg, $red-darker);
+  background:linear-gradient($red-bg, $red-darker);
+  @include vendor(border-radius, 10px);
+  .quotes{
+    font-size: 3em;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+  }
+  .clock{
+    margin-right: .625em;
+  }
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.tweet-box + p {margin: .9375em 0 2em 5.3125em; font-style:italic;}
+
+/* creates the triangle */
+.tweet-box:after {
+  content:"";
+  position:absolute;
+  bottom:-35px;
+  left:85px;
+  border-width:0 35px 50px 0px;
+  border-style:solid;
+  border-color:transparent $red-darker;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+    @media screen and (max-width: 990px){
+      left: 80px;
+    }
+}
+
+
+.counter-section{
+  text-align: center;
+  padding: 3.5em 0em;
+  ul{
+    li{
+      display: inline-block;
+      @include heading-font();
+      font-size: 2em;
+      &:nth-last-child(-n+2){
+        margin-left: 1.25em;
+      }
+    }
+  }
+  .count-tag{
+    font-size: 2.5em;
+    margin: .625em 0em 0em;
+    @include heading-font();
+  }
+  .label{
+    @include heading-font();
+    margin: 0;
+  }
+}
+
+/* ==========================================
+	DESIGNER TOOL
+============================================*/
+.canvas-wrap {
+  margin-top: 2em; 
+}
+
+.customisation {
+  margin-top: 2em; 
+  section {
+    background-color: #272727;
+    margin-bottom: 1.25em;
+    padding: .625em; 
+  }
+}

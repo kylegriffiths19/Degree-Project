@@ -1,0 +1,355 @@
+// ============================
+//	Settings Partial File for:
+//	Author: Shane Griffiths
+//	Project Contributors:
+//
+//	* Intructions
+//	---------------------------
+//	1. Project Specific settings.
+//	2. Set colours, fonts, base units etc etc.
+//
+//============================ */
+
+@font-face{
+font-family: 'american';
+    src: url('/_assets/fonts/american_captain-webfont.eot');
+    src: url('/_assets/fonts/american_captain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/_assets/fonts/american_captain-webfont.woff') format('woff'),
+         url('/_assets/fonts/american_captain-webfont.ttf') format('truetype'),
+         url('/_assets/fonts/american_captain-webfont.svg#american_captainregular') format('svg');
+}
+/* ==========================================
+	Type Based Settings
+============================================*/
+@mixin heading-font {
+	font-family: american, avenir;
+	font-weight: 400;
+	color: $red-bg;
+}
+@mixin body-font($type: regular, $style: normal){
+	$value: 0;
+	color: #34332F;
+	@if $style == italic {
+		$value: 'i';
+	} @else {
+		$value: 'n';
+}
+@if $type == thin {
+	font-family: avenir, sans-serif;
+	font-weight: 100;
+}
+@if $type == light {
+	font-family: avenir, sans-serif;
+	font-weight: 300;
+} @else if $type == regular {
+	font-family: avenir, sans-serif;
+	font-weight: 400;
+} @else if $type == bold {
+	font-family: avenir, sans-serif;
+	font-weight: 700;
+}
+	font-style: $style;
+}
+
+
+/* ==========================================
+	Color Settings
+============================================*/
+$text: #F7F1E1;
+$white-bg: #F7F1E1;
+$black-bg: #272727;
+$red-bg: #F24E45;
+
+$black-darker: darken( $black-bg, 75% );
+$red-darker: darken( $red-bg, 20% );
+
+
+/* ==========================================
+	LIST ICONS FONT
+============================================*/
+
+@font-face {
+    font-family: 'Listicons';
+    src: url('/_assets/fonts/listicons/listicons-webfont.eot');
+    src: url('/_assets/fonts/listicons/listicons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/_assets/fonts/listicons/listicons-webfont.woff') format('woff'),
+         url('/_assets/fonts/listicons/listicons-webfont.ttf') format('truetype'),
+         url('/_assets/fonts/listicons/listicons-webfont.svg#ListiconsGlyphsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Listicons*/
+
+ul, ol, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.col {
+	width: 150px;
+	float: left;
+}
+
+ul li.round-1:before {
+	content: "A";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-2:before {
+	content: "B";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-3:before {
+	content: "C";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-4:before {
+	content: "D";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-5:before {
+	content: "E";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-6:before {
+	content: "F";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-7:before {
+	content: "G";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-8:before {
+	content: "H";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-9:before {
+	content: "I";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-10:before {
+	content: "J";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-11:before {
+	content: "K";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.round-12:before {
+	content: "L";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.hierarchical-1:before {
+	content: "M";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.hierarchical-2:before {
+	content: "N";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.hierarchical-3:before {
+	content: "O";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.hierarchical-4:before {
+	content: "P";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-1:before {
+	content: "Q";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-2:before {
+	content: "R";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-3:before {
+	content: "S";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-4:before {
+	content: "T";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-5:before {
+	content: "U";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-6:before {
+	content: "V";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-7:before {
+	content: "W";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-8:before {
+	content: "X";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-9:before {
+	content: "Y";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-10:before {
+	content: "Z";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-11:before {
+	content: "a";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-12:before {
+	content: "b";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-13:before {
+	content: "c";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-14:before {
+	content: "d";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-15:before {
+	content: "e";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-16:before {
+	content: "f";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-17:before {
+	content: "g";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-18:before {
+	content: "h";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-19:before {
+	content: "i";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-20:before {
+	content: "j";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-21:before {
+	content: "k";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.arrow-22:before {
+	content: "l";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.bullet-1:before {
+	content: "m";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.bullet-2:before {
+	content: "n";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.bullet-3:before {
+	content: "o";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.bullet-4:before {
+	content: "p";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.bullet-5:before {
+	content: "q";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-1:before {
+	content: "r";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-2:before {
+	content: "s";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-3:before {
+	content: "t";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-4:before {
+	content: "u";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-5:before {
+	content: "v";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-6:before {
+	content: "w";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-7:before {
+	content: "x";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-8:before {
+	content: "y";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
+ul li.misc-9:before {
+	content: "z";
+	font: 22px 'Listicons';
+	margin-right: 5px;
+}
